@@ -1,0 +1,249 @@
+* {
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    color: rgb(0, 0, 0);
+    background-color: white;
+    margin: 0px;
+    }
+    /* Nav Bar CSS */
+header {        
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.85;
+    z-index: 100;
+    overflow: hidden;
+}
+    header .logo-img {
+        height: 68.8px;
+    }
+    header ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: black;
+        height: 100%;
+    }
+    header li {
+        font-weight: bold;
+        height: 100%;
+    }
+    header li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 24px 36px;
+        font-size: 17px;
+        text-decoration: none;
+    }
+    header li a:hover {
+        font-weight: bold;
+        background-color: white;
+        color: black;
+    }
+    header .bar-icon {
+        display: none;
+        height: 68.8px;
+    }
+    /* For mobile compatibility */
+    @media screen and (max-width: 970px) {
+        /* Before opening the nav bar */
+        header ul {display: none;}
+        header .bar-icon {
+            float: right;
+            display: block;
+        }
+        /* After opening the nav bar */
+        header.topnav.responsive {position: fixed; display: block;}
+        header.topnav.responsive .bar-icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        header.responsive ul{
+            float: none;
+            display: block;
+            text-align: center;
+        }
+    }
+
+section {
+    display: flex;
+    border-bottom: 0.5px solid gray;
+    text-align: center;
+    overflow: hidden;  
+}
+.section-header {
+    border-bottom: 0.5px solid gray;
+    position: relative;
+    padding-bottom: 20px;
+    font-size: 40px;
+}
+/* Home CSS */
+    .mySlides {
+        text-align: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+    }
+    .fade {
+        -webkit-animation-name: fade;
+        animation-name: fade;
+        -webkit-animation-duration: 0.5s;
+        animation-duration: 0.5s;
+    }
+        @-webkit-keyframes fade {
+            from {opacity: .8}
+            to {opacity: 1;}
+        }
+        @keyframes fade {
+            from {opacity: .8}
+            to {opacity: 1;}
+        }
+    .welcome-text {
+        color: white;
+        background-color: black;
+        position: absolute;
+        top: 300px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: 'Courgette', cursive;
+        font-size: 50px;
+    }
+    .cover {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    .filter {
+        filter: brightness(80%)
+    }
+    .prev, .next {
+        cursor: pointer;
+        top: 50%;
+        padding: 16px;
+        color: gray;
+        font-weight: bold;
+        font-size: 25px;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }   
+    .next {
+        right: 0;
+    }
+    .prev {
+        left: 0;
+    }
+    .prev:hover, .next:hover {
+        background-color: white;
+    }
+/* Menu CSS */
+    section#menu {
+        height: 700px;
+    }
+    .menu-container {
+        display: flex;
+    }
+    .menu-list {
+        text-align: left;
+        flex: 1 1 100%;
+    }
+        .menu-list.left {
+            padding-right: 20px;
+        }
+        .menu-list.right {
+            padding-left: 20px;
+        }
+    .menu-item {
+        display: flex;            
+        padding: 10px;
+        border-bottom: 0.5px solid gray;
+    }
+    .menu-pictures {
+        width: 70px;
+        height: 70px;
+        overflow: hidden;
+        float: left;
+        border: 0.5px solid gray;
+    }
+    .menu-item-text {
+        padding-left: 15px;
+        width: 70%; /* < need to change this into style in the specific divs because the pictures are not all the same dimensions and should all be 70px x 70px */
+    }
+    .menu-food-text {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .menu-price {
+        text-align: right;
+    }
+    .special-linebr {
+        display: none;
+    }
+    /* For mobile compatibility */
+    @media screen and (max-width: 970px) {
+        .menu-container {display: block;}
+        .menu-list.left, .menu-list.right {padding: 0;}
+        section#menu {height: 1000px;}
+        .special-linebr {display: inline-block;}
+    }
+    @media screen and (max-width: 391px) {
+        section#menu {height: 100%;}
+        .menu-food-text {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .menu-food-subtext {
+            font-size: 14px;
+        }
+    }
+/* Contact CSS */
+    .contact-tab {
+        display: flex;
+        justify-content: space-around;
+        margin: 0;
+        padding: 0;
+    }
+    .contact-info {
+        width: 155px;
+    }
+    @media screen and (max-width: 880px) {
+        .contact-tab {justify-content:space-evenly;}
+    }
+    @media screen and (max-width: 760px) {
+        .contact-tab {justify-content: center;}
+    }
+    @media screen and (max-width: 500px) {
+        .contact-tab {
+            display: block;
+        }
+        .contact-info {
+            width: auto;
+        }
+    }
+    .map {
+        border: 0.5px solid gray;
+        height: 400px;
+        width: 1000px;
+    }
+    @media screen and (max-width: 1000px) {
+        .map {width: 100vw;}
+    }
+footer {
+    text-align: center;
+    padding: 50px;    
+}

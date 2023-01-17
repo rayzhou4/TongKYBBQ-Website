@@ -87,7 +87,8 @@ section {
 .section-header {
     border: 0.5px solid gray;
     position: relative;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
+    padding: 20px;
     font-size: 40px;
 }
 /* Home CSS */

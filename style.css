@@ -85,7 +85,7 @@ section {
     overflow: hidden;  
 }
 .section-header {
-    border-bottom: 0.5px solid gray;
+    border: 0.5px solid gray;
     position: relative;
     padding-bottom: 20px;
     font-size: 40px;
@@ -177,7 +177,7 @@ section {
         height: 70px;
         overflow: hidden;
         float: left;
-        border: 0.5px solid gray;
+        /* border: 0.5px solid gray; */
     }
     .menu-item-text {
         padding-left: 15px;
